@@ -10,18 +10,18 @@
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h1 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Ubah Data Ruangan</h1>
 
-        <form method="POST" action="{{ route('ruangan.editRuangan', $ruangan['ruangan']) }}">
+        <form method="POST" action="{{ route('ruangan.update', $ruangan['data']['kode_ruangan']) }}">
     @csrf
     @method('PUT')
             <div class="mb-4">
                 <label for="kode_ruangan" class="block text-gray-700 text-sm font-bold mb-2">Kode Ruangan:</label>
-                <input type="text" id="kode_ruangan" name="kode_ruangan" value="{{ $ruangan['kode_ruangan'] }}" readonly
+                <input type="text" id="kode_ruangan" name="kode_ruangan" value="{{ $ruangan['data']['kode_ruangan'] }}" readonly
                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500">
             </div>
 
             <div class="mb-4">
                 <label for="nama_ruangan" class="block text-gray-700 text-sm font-bold mb-2">Nama Ruangan:</label>
-                <input type="text" id="nama_ruangan" name="nama_ruangan"   value="{{ $ruangan['nama_ruangan'] }}"
+                <input type="text" id="nama_ruangan" name="nama_ruangan"   value="{{ $ruangan['data']['nama_ruangan'] }}"
                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500">
             </div>
 

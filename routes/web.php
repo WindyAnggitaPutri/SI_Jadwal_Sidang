@@ -24,7 +24,7 @@ Route::get('/ruangan/tambahRuangan', [RuanganController::class, 'create']); // m
 Route::post('/ruangan', [RuanganController::class, 'store']); // proses form POST
 
 Route::get('/ruangan/editRuangan/{id}', [RuanganController::class, 'edit'])->name('ruangan.editRuangan');
-Route::put('/ruangan/{id}', [RuanganController::class, 'update']);
+Route::put('/ruangan/{id}', [RuanganController::class, 'update'])->name('ruangan.update');
 
 // Hapus ruangan
 Route::delete('/ruangan/{id}', [RuanganController::class, 'destroy']);

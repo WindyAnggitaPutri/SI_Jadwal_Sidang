@@ -42,10 +42,11 @@ public function store(Request $request)
             return back()->with('error', 'Gagal menambahkan data!');
         }
     } 
-public function edit($id)
+public function edit($kode_ruangan)
 {
-    $response = Http::get("http://localhost:8080/ruangan/$id");
+    $response = Http::get("http://localhost:8080/ruangan/$kode_ruangan");
     $ruangan = $response->json();
+    // dd($ruangan);
     return view('ruangan.editRuangan', compact('ruangan'));
 }
 
