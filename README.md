@@ -2,7 +2,7 @@
 
 Proyek ini merupakan implementasi CRUD (Create, Read, Update, Delete) untuk data ruangan menggunakan **Laravel sebagai frontend**, **TailwindCSS untuk styling**, dan **REST API eksternal** sebagai backend.
 
-## Link Github Kebutuhan untuk sistem ini
+## 📝 Link Github Kebutuhan untuk sistem ini
 🔗 [SI-KRS Database (GitHub)](https://github.com/mayangm09/DBE-SI-Penjadwalan-Skripsi.git) <br>
 🔗 [SI-KRS Database (GitHub)](https://github.com/MuhammadAbiAM/BE-Jadwal-Skripsi.git)
 
