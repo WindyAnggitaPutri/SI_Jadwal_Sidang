@@ -1,4 +1,4 @@
-# Laravel + TailwindCSS - CRUD Ruangan (Frontend dengan REST API)
+# 🚀 Laravel + TailwindCSS - CRUD Ruangan (Frontend dengan REST API)
 
 Proyek ini merupakan implementasi CRUD (Create, Read, Update, Delete) untuk data ruangan menggunakan **Laravel sebagai frontend**, **TailwindCSS untuk styling**, dan **REST API eksternal** sebagai backend.
 
@@ -12,7 +12,7 @@ Proyek ini merupakan implementasi CRUD (Create, Read, Update, Delete) untuk data
 
 ---
 
-## BACKEND
+##  ⚙️  BACKEND
 
 ### 1. Clone repository BackEnd
 
@@ -51,7 +51,7 @@ Ruangan :
 
 
 
-## FRONTEND
+## 🧩 FRONTEND
 ### 1. Install Laravel
 - Pergi ke ke folder yang sama dengan Backend
 - Masuk ke CMD /terminal
