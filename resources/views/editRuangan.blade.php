@@ -10,7 +10,7 @@
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h1 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Ubah Data Ruangan</h1>
 
-        <form method="POST" action="{{ route('ruangan.update', $ruangan['data']['kode_ruangan']) }}">
+        <form method="POST" action="{{ route('Ruangan.update', $ruangan['data']['kode_ruangan']) }}">
     @csrf
     @method('PUT')
             <div class="mb-4">
@@ -30,7 +30,7 @@
                         class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                     Simpan Perubahan
                 </button>
-                <a href="/ruangan" class="inline-block align-baseline font-bold text-sm text-gray-600 hover:text-gray-800">
+                <a href="/Ruangan" class="inline-block align-baseline font-bold text-sm text-gray-600 hover:text-gray-800">
                     Batal
                 </a>
             </div>

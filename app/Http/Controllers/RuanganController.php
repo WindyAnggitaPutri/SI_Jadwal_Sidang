@@ -12,12 +12,12 @@ class RuanganController extends Controller
     {
          $response = Http::get('http://localhost:8080/ruangan');
         $ruangans = $response->json();
-        return view('ruangan.index', compact('ruangans'));
+        return view('Ruangan', compact('ruangans'));
     }
 
     public function create()
     {
-        return view('ruangan.tambahRuangan');
+        return view('tambahRuangan');
     }
 
     // Menyimpan ruangan baru
@@ -37,7 +37,7 @@ public function store(Request $request)
 
         // Cek apakah berhasil atau gagal
         if ($response->successful()) {
-            return redirect('/ruangan')->with('success', 'Data ruangan berhasil ditambahkan!');
+            return redirect('Ruangan')->with('success', 'Data ruangan berhasil ditambahkan!'); //Ruangan nya itu untuk kembali, jadi harus sama kaya nama view
         } else {
             return back()->with('error', 'Gagal menambahkan data!');
         }
@@ -46,8 +46,8 @@ public function edit($kode_ruangan)
 {
     $response = Http::get("http://localhost:8080/ruangan/$kode_ruangan");
     $ruangan = $response->json();
-    // dd($ruangan);
-    return view('ruangan.editRuangan', compact('ruangan'));
+    //dd($ruangan);
+    return view('editRuangan', compact('ruangan'));
 }
 
 
@@ -62,17 +62,17 @@ public function edit($kode_ruangan)
     ]);
 
     if ($response->successful()) {
-        return redirect('/ruangan')->with('success', 'Data berhasil diubah.');
+        return redirect('Ruangan')->with('success', 'Data berhasil diubah.');
     } else {
         return back()->with('error', 'Gagal mengubah data.');
     }
 }
 
- public function destroy($id)
+ public function destroy($kode_ruangan)
     {
         // Kirim DELETE ke endpoint
-        Http::delete("http://localhost:8080/ruangan/{$id}");
-        return redirect('/ruangan');
+        Http::delete("http://localhost:8080/ruangan/{$kode_ruangan}");
+        return redirect('Ruangan');
     }
 
 

@@ -10,7 +10,7 @@
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h1 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Tambah Data Ruangan</h1>
 
-        <form method="POST" action="/ruangan">
+        <form  action="{{route('Ruangan.store')}}" method="post">
             @csrf
             <div class="mb-4">
                 <label for="kode_ruangan" class="block text-gray-700 text-sm font-bold mb-2">Kode Ruangan:</label>
@@ -29,7 +29,7 @@
                         class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                     Simpan Ruangan
                 </button>
-                <a href="/ruangan" class="inline-block align-baseline font-bold text-sm text-gray-600 hover:text-gray-800">
+                <a href="/Ruangan" class="inline-block align-baseline font-bold text-sm text-gray-600 hover:text-gray-800">
                     Batal
                 </a>
             </div>

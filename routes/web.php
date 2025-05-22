@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RuanganController;
+use App\Http\Controllers\DasboardController;
+use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\JadwalController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,18 +17,18 @@ use App\Http\Controllers\RuanganController;
 |
 */
 
-Route::get('/', function () {
-    return redirect('/ruangan');
-}); //ini tuh yang buat buka halaman dibuat reirect biar bis amasuk ke view index tapi sekalian ngirim variabel ruangans
+// Route::get('/', function () {
+//     return redirect('/ruangan');
+// }); //ini tuh yang buat buka halaman dibuat reirect biar bis amasuk ke view index tapi sekalian ngirim variabel ruangans
 
-Route::get('/ruangan', [RuanganController::class, 'index']);
+// Route::get('/', function () {
+//     return view('halamanUtama');
+// })->name('halamanUtama');
+Route::get('/', [DasboardController::class, 'index'])->name('Dashboard.index');
+
+Route::resource('Ruangan', RuanganController::class);
+Route::resource('Mahasiswa', MahasiswaController::class);
+Route::resource('Jadwal', JadwalController::class);
 
 
-Route::get('/ruangan/tambahRuangan', [RuanganController::class, 'create']); // menampilkan form
-Route::post('/ruangan', [RuanganController::class, 'store']); // proses form POST
 
-Route::get('/ruangan/editRuangan/{id}', [RuanganController::class, 'edit'])->name('ruangan.editRuangan');
-Route::put('/ruangan/{id}', [RuanganController::class, 'update'])->name('ruangan.update');
-
-// Hapus ruangan
-Route::delete('/ruangan/{id}', [RuanganController::class, 'destroy']);
