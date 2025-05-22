@@ -19,6 +19,10 @@ Proyek ini merupakan implementasi CRUD (Create, Read, Update, Delete) untuk data
 
 ---
 
+## 💾 DATABASE 
+- import database yang sudah disediakan
+🔗 [SI-KRS Database (GitHub)](https://github.com/MuhammadAbiAM/BE-Jadwal-Skripsi.git)
+
 ##  ⚙️  BACKEND
 
 ### 1. Clone repository BackEnd
