@@ -50,6 +50,7 @@ Ruangan :
 - DELETE → http://localhost:8080/ruangan/{id}
 
 
+
 ## FRONTEND
 ### 1. Install Laravel
 - Pergi ke ke folder yang sama dengan Backend
