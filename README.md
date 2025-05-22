@@ -20,8 +20,9 @@ Proyek ini merupakan implementasi CRUD (Create, Read, Update, Delete) untuk data
 ---
 
 ## 💾 DATABASE 
-- import database yang sudah disediakan
+- import database yang sudah disediakan, pilih yah penjadwalan_sidang.sql
 🔗 [SI-KRS Database (GitHub)](https://github.com/mayangm09/DBE-SI-Penjadwalan-Skripsi.git)
+
 
 ##  ⚙️  BACKEND
 
