@@ -18,7 +18,7 @@ Proyek ini merupakan implementasi CRUD (Create, Read, Update, Delete) untuk data
 
 ```bash
 git clone [https://github.com/nama-user/nama-repo.git](https://github.com/MuhammadAbiAM/BE-Jadwal-Skripsi.git)
-cd nama-repo
+
 ```
 
 ### 2. Composer Install
