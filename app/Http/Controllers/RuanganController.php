@@ -1,0 +1,78 @@
+<?php
+
+namespace App\Http\Controllers;
+
+
+use Illuminate\Support\Facades\Http; // import Http Client
+use Illuminate\Http\Request;
+class RuanganController extends Controller
+{
+    
+    public function index()
+    {
+         $response = Http::get('http://localhost:8080/ruangan');
+        $ruangans = $response->json();
+        return view('ruangan.index', compact('ruangans'));
+    }
+
+    public function create()
+    {
+        return view('ruangan.tambahRuangan');
+    }
+
+    // Menyimpan ruangan baru
+public function store(Request $request)
+    {
+        // Validasi form (opsional tapi disarankan)
+        $request->validate([
+            'kode_ruangan' => 'required',
+            'nama_ruangan' => 'required',
+        ]);
+
+        // Kirim data ke endpoint backend API (POST)
+        $response = Http::post('http://localhost:8080/ruangan', [
+            'kode_ruangan' => $request->kode_ruangan,
+            'nama_ruangan' => $request->nama_ruangan,
+        ]);
+
+        // Cek apakah berhasil atau gagal
+        if ($response->successful()) {
+            return redirect('/ruangan')->with('success', 'Data ruangan berhasil ditambahkan!');
+        } else {
+            return back()->with('error', 'Gagal menambahkan data!');
+        }
+    } 
+public function edit($id)
+{
+    $response = Http::get("http://localhost:8080/ruangan/$id");
+    $ruangan = $response->json();
+    return view('ruangan.editRuangan', compact('ruangan'));
+}
+
+
+ // Update data ruangan
+    public function update(Request $request, $id)
+    {
+       // Validasi input
+        // Kirim data ke API
+    $response = Http::put("http://localhost:8080/ruangan/$id", [
+        'kode_ruangan' => $request->kode_ruangan,
+        'nama_ruangan' => $request->nama_ruangan,
+    ]);
+
+    if ($response->successful()) {
+        return redirect('/ruangan')->with('success', 'Data berhasil diubah.');
+    } else {
+        return back()->with('error', 'Gagal mengubah data.');
+    }
+}
+
+ public function destroy($id)
+    {
+        // Kirim DELETE ke endpoint
+        Http::delete("http://localhost:8080/ruangan/{$id}");
+        return redirect('/ruangan');
+    }
+
+
+}
