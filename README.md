@@ -12,10 +12,17 @@ Proyek ini merupakan implementasi CRUD (Create, Read, Update, Delete) untuk data
 
 ---
 
-## 📦 Instalasi
+## BACKEND
 
 ### 1. Clone Repo
 ```bash
 git clone [https://github.com/nama-user/nama-repo.git](https://github.com/MuhammadAbiAM/BE-Jadwal-Skripsi.git)
 cd nama-repo
 
+### 2. Composer Install
+- masuk ke terminal yang dimana Backend itu dijalankan
+'''composer intall
+
+### 3. Menjalankan CodeIgniter
+- masih di terminal yang sama
+'''php spark serve
