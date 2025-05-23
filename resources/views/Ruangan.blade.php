@@ -85,6 +85,11 @@
                                  @endforeach
                         </tbody>
                     </table>
+                     <form action="{{ route('cetak.pdf') }}" method="GET">
+                    <button type="submit" class="bg-blue-500 text-white p-2 mt-4 rounded hover:bg-blue-600">
+                         Cetak
+                    </button>
+                </form>
                 </div>
 
             </div>

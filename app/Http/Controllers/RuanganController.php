@@ -75,5 +75,16 @@ public function edit($kode_ruangan)
         return redirect('Ruangan');
     }
 
+     public function exportPdf()
+    {
+        $response = Http::get('http://localhost:8080/ruangan');
+        if ($response->successful()) {
+            $ruangan = collect($response->json());
+            $pdf = Pdf::loadView('pdf.cetak', compact('ruangan')); // Ubah 'cetak.pdf' menjadi 'pdf.cetak'
+            return $pdf->download('ruangan.pdf');
+        } else {
+            return back()->with('error', 'Gagal mengambil data untuk PDF');
+        }
+    }
 
 }
